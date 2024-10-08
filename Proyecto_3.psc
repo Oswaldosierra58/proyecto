@@ -7,7 +7,7 @@ SubProceso aumento_articulos(c)
 	Dimension grano[100,3]
 	
 	Segun c Hacer
-		//caso1 fruta
+			//caso1 fruta
 		Caso 1:
 			Escribir "Categoria Frutas";
 			Escribir "Estos son los articulos actuales y sus respectivos precios:"
@@ -43,85 +43,85 @@ SubProceso aumento_articulos(c)
 			Leer filas
 			
 			Si filas>0 Entonces
-			Para i = 4 Hasta (3+filas) Hacer
-				Escribir "Ingrese el nombre del articulo:", i;
-				Leer fruta[i,1];
-				Escribir "Ingrese el precio del articulo por unidad(sin puntos ni comas): ", fruta[i,1];
-				Leer fruta[i,2];
-				Escribir "Ingrese La cantidad del articulo(sin puntos ni comas): ",fruta[i,1];
-				Leer fruta[i,3];
+				Para i = 4 Hasta (3+filas) Hacer
+					Escribir "Ingrese el nombre del articulo:", i;
+					Leer fruta[i,1];
+					Escribir "Ingrese el precio del articulo por unidad(sin puntos ni comas): ", fruta[i,1];
+					Leer fruta[i,2];
+					Escribir "Ingrese La cantidad del articulo(sin puntos ni comas): ",fruta[i,1];
+					Leer fruta[i,3];
+				FinPara
+				
+				Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
+				Para i = 1 Hasta (3+filas) Hacer
+					Para j = 1 Hasta 3 Hacer
+						Escribir Sin Saltar ,"|        ",  fruta[i,j], "     | "; 
+					FinPara
+					Escribir " ";
+				FinPara
+			sino 
+				Escribir "Lo lamento no se puede ingresar un numero menor a 0";
+			FinSi
+			Escribir "Presione enter para continuar";
+			Leer p
+			Limpiar Pantalla;
+		Caso 2:
+			Escribir "Categoria Verduras";
+			Escribir "Estos son los articulos actuales y sus respectivos precios:"
+			//definir nombres del producto
+			Para i = 1 Hasta 100 Hacer
+				verdura[1,1] = "Zanahoria"
+				verdura[2,1] = "Tomate   "
+				verdura[3,1] = "Lechuga  "
+			FinPara
+			//definir precio del producto por unidad
+			Para i = 1 Hasta 100 Hacer
+				verdura[1,2] = "700";
+				verdura[2,2] = "900";
+				verdura[3,2] = "950";
+			FinPara
+			//definir cantidada del producto
+			Para i = 1 Hasta 100 Hacer
+				verdura[1,3] = "6";
+				verdura[2,3] = "12";
+				verdura[3,3] = "14";
+			FinPara
+			//mostramos la matriz
+			Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
+			Para i = 1 Hasta 3 Hacer
+				Para j = 1 Hasta 3 Hacer
+					// "Nombre del producto", "   ", "Precio por unidad", "    ","cantidad del producto"
+					Escribir Sin Saltar ,"|     ",  verdura[i,j], "     |  "		
+				FinPara 
+				Escribir "";
 			FinPara
 			
-			Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
-			Para i = 1 Hasta (3+filas) Hacer
-				Para j = 1 Hasta 3 Hacer
-					Escribir Sin Saltar ,"|        ",  fruta[i,j], "     |  "; 
-				FinPara
-				Escribir " ";
-			FinPara
-		sino 
-			Escribir "Lo lamento no se puede ingresar un numero menor a 0";
-		FinSi
-		Escribir "Presione enter para continuar";
-		Leer p
-		Limpiar Pantalla;
-	Caso 2:
-		Escribir "Categoria Verduras";
-		Escribir "Estos son los articulos actuales y sus respectivos precios:"
-		//definir nombres del producto
-		Para i = 1 Hasta 100 Hacer
-			verdura[1,1] = "Zanahoria"
-			fruta[,1] = "Tomate"
-			verdura[3,1] = "Lechuga"
-		FinPara
-		//definir precio del producto por unidad
-		Para i = 1 Hasta 100 Hacer
-			fruta[1,2] = "700";
-			fruta[2,2] = "900";
-			fruta[3,2] = "950";
-		FinPara
-		//definir cantidada del producto
-		Para i = 1 Hasta 100 Hacer
-			fruta[1,3] = "6";
-			fruta[2,3] = "12";
-			fruta[3,3] = "14";
-		FinPara
-		//mostramos la matriz
-		Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
-		Para i = 1 Hasta 3 Hacer
-			Para j = 1 Hasta 3 Hacer
-				// "Nombre del producto", "   ", "Precio por unidad", "    ","cantidad del producto"
-				Escribir Sin Saltar ,"|        ",  fruta[i,j], "     |  "		
-			FinPara 
-			Escribir "";
-		FinPara
-		
-		Escribir "Ingrese cuantos articulos nuevos va a ingresar";
-		Leer filas
-		
-		Si filas>0 Entonces
-			Para i = 4 Hasta (3+filas) Hacer
-				Escribir "Ingrese el nombre del articulo:", i;
-				Leer fruta[i,1];
-				Escribir "Ingrese el precio del articulo por unidad(sin puntos ni comas): ", fruta[i,1];
-				Leer fruta[i,2];
-				Escribir "Ingrese La cantidad del articulo(sin puntos ni comas): ",fruta[i,1];
-				Leer fruta[i,3];
-			FinPara
+			Escribir "Ingrese cuantos articulos nuevos va a ingresar";
+			Leer filas
 			
-			Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
-			Para i = 1 Hasta (3+filas) Hacer
-				Para j = 1 Hasta 3 Hacer
-					Escribir Sin Saltar ,"|        ",  fruta[i,j], "     |  "; 
+			Si filas>0 Entonces
+				Para i = 4 Hasta (3+filas) Hacer
+					Escribir "Ingrese el nombre del articulo:", i;
+					Leer verdura[i,1];
+					Escribir "Ingrese el precio del articulo por unidad(sin puntos ni comas): ", verdura[i,1];
+					Leer verdura[i,2];
+					Escribir "Ingrese La cantidad del articulo(sin puntos ni comas): ", verdura[i,1];
+					Leer verdura[i,3];
 				FinPara
-				Escribir " ";
-			FinPara
-		sino 
-			Escribir "Lo lamento no se puede ingresar un numero menor a 0";
-		FinSi
-		Escribir "Presione enter para continuar";
-		Leer p
-		Limpiar Pantalla;
+				
+				Escribir "|Nombre del producto|", " ", "|Precio por unidad|", "","|cantidad del producto|";
+				Para i = 1 Hasta (3+filas) Hacer
+					Para j = 1 Hasta 3 Hacer
+						Escribir Sin Saltar ,"|      ",  verdura[i,j], "     | "; 
+					FinPara
+					Escribir " ";
+				FinPara
+			sino 
+				Escribir "Lo lamento no se puede ingresar un numero menor a 0";
+			FinSi
+			Escribir "Presione enter para continuar";
+			Leer p
+			Limpiar Pantalla;
 	FinSegun
 FinSubProceso
 
@@ -130,14 +130,10 @@ SubProceso aumento_precio(c1)
 	Definir fruta Como Caracter
 	Definir suma,suma1,suma2 Como Entero
 	Definir cambio,num1,m,f,l Como Entero
-
+	
 	Dimension fruta[3,3]
 	Dimension verdura[3,3]
-	Dimension grano[3,3]
-	Dimension harinas[3,3]
-	Dimension dulces[3,3]
-	Dimension bebidas[3,3]
-	
+	Dimension grano[3,3]	
 	
 	Segun c1 Hacer
 		Caso 1:
@@ -211,6 +207,84 @@ SubProceso aumento_precio(c1)
 				FinPara
 				Escribir " "
 			FinPara
+			Escribir "Presione enter para continuar";
+			Leer p
+			Limpiar Pantalla;
+			//categoria verdura
+		Caso 2:
+			Escribir "Categoria Verduras";
+			Escribir "Estos sonn los articulos actuales y sus respectivos precios"
+			//nombres del producto
+			Para i = 1 Hasta 3 Hacer
+				verdura[1,1] = "Zanahoria"
+				verdura[2,1] = "Tomate   "
+				verdura[3,1] = "Lechuga  "
+			FinPara
+			//precio del producto por unidad
+			Para i = 1 Hasta 3 Hacer
+				verdura[1,2] = "700";
+				verdura[2,2] = "900";
+				verdura[3,2] = "950";
+			FinPara
+			//cantidada del producto
+			Para i = 1 Hasta 3 Hacer
+				verdura[1,3] = "6";
+				verdura[2,3] = "12";
+				verdura[3,3] = "14";
+			FinPara
+			//mostramos la matriz
+			Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
+			Para i = 1 Hasta 3 Hacer
+				Para j = 1 Hasta 3 Hacer
+					// "Nombre del producto", "   ", "Precio por unidad", "    ","cantidad del producto"
+					Escribir Sin Saltar ,"|        ",  verdura[i,j], "     |  "		
+				FinPara 
+				Escribir ""
+			FinPara
+			
+			Escribir "Ingrese el numero del articulo al cual desea aumentar el precio:";
+			Leer cambio
+			suma <- 0 
+			suma1 <- 0 
+			suma2 <- 0
+			//mirar despues 
+//			Repetir
+			
+			Segun cambio Hacer
+				Caso 1:
+					Escribir "Ingrese la cantidad a sumar para dar el nuevo precio:";
+					Leer num1
+					m <- ConvertirANumero(verdura[1,2]);
+					suma<- m + num1
+					verdura[1,2] <- ConvertirATexto(suma);
+				Caso 2:
+					Escribir "Ingrese la cantidad a sumar para dar el nuevo precio:";
+					Leer num1
+					f <- ConvertirANumero(verdura[2,2]);
+					suma1 <- f + num1
+					verdura[2,2] <- ConvertirATexto(suma1);
+				Caso 3:
+					Escribir "Ingrese la cantidad a sumar para dar el nuevo precio:";
+					Leer num1
+					l <- ConvertirANumero(verdura[3,2]);
+					suma2 <- l + num1
+					verdura[3,2] <- ConvertirATexto(suma2);
+				De Otro Modo:
+					Escribir "Articulo no encontrado";
+					Escribir "Por favor ingrese uno de los numeros los articulos ya existentes";
+			Fin Segun
+//		Hasta Que cambio<>0 && cambio>0
+			
+			Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
+			Para i = 1 Hasta 3 Hacer
+				Para j = 1 Hasta 3 Hacer
+					Escribir Sin Saltar ,"|        ",  verdura[i,j], "     |  " 
+				FinPara
+				Escribir " "
+			FinPara
+			Escribir "Presione enter para continuar";
+			Leer p
+			Limpiar Pantalla;
 	FinSegun
 FinSubProceso
 
@@ -223,10 +297,6 @@ SubProceso aumento_cantidad(c2)
 	Dimension fruta[3,3]
 	Dimension verdura[3,3]
 	Dimension grano[3,3]
-	Dimension harinas[3,3]
-	Dimension dulces[3,3]
-	Dimension bebidas[3,3]
-	
 	
 	Segun c2 Hacer
 		Caso 1:
@@ -309,10 +379,6 @@ SubProceso eliminar_articulos(c)
 	Dimension fruta[4,3]
 	Dimension verdura[5,3]
 	Dimension grano[5,3]
-	Dimension harinas[5,3]
-	Dimension dulces[5,3]
-	Dimension bebidas[5,3]
-	
 	
 	Segun c Hacer
 			//caso1 fruta
@@ -349,7 +415,7 @@ SubProceso eliminar_articulos(c)
 			
 			Escribir "Ingrese cuantos articulos va a  eliminar recuerde que no puede ser menos de lo que hay";
 			Leer filas
-			//ARREGLAR
+			
 			Si filas<3 Entonces
 				Escribir "|Nombre del producto|", "", "|Precio por unidad|", "","|cantidad del producto|";
 				Para i = 1 Hasta (3-filas) Hacer
@@ -601,7 +667,7 @@ Algoritmo Proyecto_2
 	Definir num Como Entero
 	Definir nuevo_arti,s,aumento,cantidad Como logico
 	nuevo_arti <- Falso
-
+	
 	Escribir "Bienvenido";
 	Escribir "En este programa podra llevar el inventario de un almacen";
 	Escribir "Tenga en cuenta que la informacion digitada a continuacion no se guardara";
@@ -628,7 +694,7 @@ Algoritmo Proyecto_2
 		Limpiar Pantalla;
 		
 		Segun num Hacer
-			//agragar, aumenta
+				//agragar, aumenta
 			Caso 1:
 				Escribir "1.Agregar"
 				Escribir "Desea Agregar nuevas filas(articulos)";
